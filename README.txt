@@ -1,6 +1,6 @@
 Dataset Description:
 
-The Cognitive Triad Dataset (CTD) comprises 5886 messages, 580 from Beyond Blue 	personal stories, 600 from the Time-to-Change blog, and 4706 from Twitter. The data were manually labeled by skilled annotators. This data is divided into six categories: self-positive, world-positive, future-positive, self-negative, world-negative, and future-negative. The Cognitive Triad Dataset was evaluated on two subtasks: aspect detection and sentiment classification on given aspects. The dataset will aid in the comprehension of Beck’s Cognitive Triad Inventory (CTI) items in a person’s social media posts.
+The Cognitive Triad Dataset (CTD) comprises 5886 messages, 580 from Beyond Blue personal stories, 600 from the Time-to-Change blog, and 4706 from Twitter. The data were manually labeled by skilled annotators. This data is divided into six categories: self-positive, world-positive, future-positive, self-negative, world-negative, and future-negative. The Cognitive Triad Dataset was evaluated on two subtasks: aspect detection and sentiment classification on given aspects. The dataset will aid in the comprehension of Beck’s Cognitive Triad Inventory (CTI) items in a person’s social media posts.
 
 
 Ready-to-Use Models:
@@ -60,6 +60,29 @@ Information about dataset files:
    
    	  1    	positive
 
+4. Dataset/Self_Aspect_Sentiment_Classification.json: This dataset is obtained by considering only self-negative, and self-positive classes in the Original Cognitive Triad Dataset for sentiment classification task on self aspect. The dataset has two classes to train: negative, and positive.
+
+	Label	Meaning      
+	-------------------------
+   	  0    	negative   
+   
+   	  1    	positive
+
+5. Dataset/Future_Aspect_Sentiment_Classification.json: This dataset is obtained by considering only future-negative, and future-positive classes in the Original Cognitive Triad Dataset for sentiment classification task on future aspect. The dataset has two classes to train: negative, and positive.
+
+	Label	Meaning      
+	-------------------------
+   	  0    	negative   
+   
+   	  1    	positive
+
+6. Dataset/World_Aspect_Sentiment_Classification.json: This dataset is obtained by considering only world-negative, and world-positive classes in the Original Cognitive Triad Dataset for sentiment classification task on world aspect. The dataset has two classes to train: negative, and positive.
+
+	Label	Meaning      
+	-------------------------
+   	  0    	negative   
+   
+   	  1    	positive
 
 Information about python files:
 
@@ -70,3 +93,9 @@ Information about python files:
 3. ML_Models_Aspect_Detection/AD_DT_NB_RFC_SVM.py: This code is used to Model Decision Tree, Random Forest, Naive Bayes and SVM for Aspect Detection task. The code utilizes the dataset All_Aspect_Dataset.json to train Decision Tree, Random Forest, Naive Bayes and SVM. In the python file, comments are provided for the important steps.
 
 4. ML_Models_Sentiment_Classification/SA_All_DT_NB_RFC_SVM.py: This code is used to Model Decision Tree, Random Forest, Naive Bayes and SVM for Sentiment Classification task. The code utilizes the dataset All_Sentiments_Dataset.json to train Decision Tree, Random Forest, Naive Bayes and SVM. In the python file, comments are provided for the important steps.
+
+5. ML_Models_Sentiment_Classification_For_Self_Aspect/Self_Aspect_DT_NB_RFC_SVM.py: This code is used to Model Decision Tree, Random Forest, Naive Bayes and SVM for Sentiment Classification task on self aspect. The code utilizes the dataset Self_Aspect_Sentiment_Classification.json to train Decision Tree, Random Forest, Naive Bayes and SVM. In the python file, comments are provided for the important steps.
+
+6. ML_Models_Sentiment_Classification_For_Future_Aspect/Future_Aspect_DT_NB_RFC_SVM.py: This code is used to Model Decision Tree, Random Forest, Naive Bayes and SVM for Sentiment Classification task on future aspect. The code utilizes the dataset Future_Aspect_Sentiment_Classification.json to train Decision Tree, Random Forest, Naive Bayes and SVM. In the python file, comments are provided for the important steps.
+
+7. ML_Models_Sentiment_Classification_For_World_Aspect/World_Aspect_DT_NB_RFC_SVM.py: This code is used to Model Decision Tree, Random Forest, Naive Bayes and SVM for Sentiment Classification task on world aspect. The code utilizes the dataset World_Aspect_Sentiment_Classification.json to train Decision Tree, Random Forest, Naive Bayes and SVM. In the python file, comments are provided for the important steps.
